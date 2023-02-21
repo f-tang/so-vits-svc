@@ -134,8 +134,10 @@ def f0_to_pitch(ff):
 
 def fill_a_to_b(a, b):
     if len(a) < len(b):
+        if len(a) == 0:
+            a = [0]
         for _ in range(0, len(b) - len(a)):
-            a.append(a[0])
+            a.append(a[-1])
 
 
 def mkdir(paths: list):
